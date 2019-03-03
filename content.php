@@ -1,6 +1,6 @@
 <div class="service_links">
 	<h1>Мне нужен</h1>
-	<div class="row justify-content-around">
+	<div >
 		<div class="col-md-4 col-lg-3"><a href="" class="service_links-link" style="background: url(assets/img/1.webp) no-repeat">Сайт<span>_</span></a></div>
 		<div class="col-md-4 col-lg-3"><a href="" class="service_links-link" style="background: url(assets/img/2.webp) no-repeat">Приложение</a></div>
 		<div class="col-md-4 col-lg-3"><a href="" class="service_links-link" style="background: url(assets/img/3.webp) no-repeat">Обслуживание</a></div>

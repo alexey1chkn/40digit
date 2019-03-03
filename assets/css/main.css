@@ -45,8 +45,8 @@ table {
 }
 
 body {
-  font-family: "Rubik", sans-serif;
-  background-color: #171C27;
+  background-color: white;
+  border: 8px solid #1565FF;
 }
 body h1 {
   font-size: 2.7vw;
@@ -55,73 +55,86 @@ body h1 {
   text-align: center;
 }
 body * {
-  color: #fff;
+  color: #47525E;
+  font-family: "Rubik", sans-serif;
 }
 body a {
   text-decoration: none;
 }
 body a:hover {
-  color: #fff;
+  color: #FA8072;
 }
 
 .top_bar {
-  margin-top: 0.7vw;
-}
-.top_bar-logo {
+  margin: 2.7vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.top_bar-logo a {
-  font-family: "Product Sans", sans-serif;
-  font-weight: bold;
-  font-size: 2.7vw;
-  line-height: 3vw;
+.top_bar-logo {
   position: relative;
+  margin-right: 3%;
+}
+.top_bar-logo a img {
+  max-height: 4vw;
 }
 .top_bar-logo div {
   position: absolute;
-  width: 138px;
-  height: 48px;
-  top: 0;
+  width: 4vw;
+  height: 4vw;
+  bottom: 50%;
   right: 50%;
-  -webkit-transform: translateX(50%);
-          transform: translateX(50%);
-  background: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#458DCA));
-  background: linear-gradient(to right, #00C2FF, #458DCA);
-  -webkit-filter: blur(2.1vw);
-          filter: blur(2.1vw);
+  -webkit-transform: translate(50%, 50%);
+          transform: translate(50%, 50%);
+  background: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
+  background: linear-gradient(to right, #00C2FF, #1565FF);
+  -webkit-filter: blur(2.7vw);
+          filter: blur(2.7vw);
+  z-index: -1;
 }
 .top_bar-menu-btn {
   display: none;
 }
 .top_bar-menu-main {
-  font-size: 1.44vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 50%;
+  margin-right: 3%;
 }
 .top_bar-menu-main a {
-  background-color: #131720;
   border: 3px solid transparent;
-  -o-border-image: linear-gradient(to right, #00C2FF, #FF003D);
-     border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#FF003D));
-     border-image: linear-gradient(to right, #00C2FF, #FF003D);
+  -o-border-image: linear-gradient(to right, #1565FF, 50%, #FF003D);
+     border-image: -webkit-gradient(linear, left top, right top, from(#1565FF), color-stop(50%), to(#FF003D));
+     border-image: linear-gradient(to right, #1565FF, 50%, #FF003D);
   border-image-slice: 1;
-  padding: 1.14vw 0;
+  padding: 1.2vw 0;
   margin: 0 0.18vw;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  font-size: 1.4vw;
   text-align: center;
   vertical-align: middle;
 }
 .top_bar-menu-main a.active {
-  background: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#FF003D));
-  background: linear-gradient(to right, #00C2FF, #FF003D);
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#1565FF), color-stop(50%), to(#FF003D));
+  background: linear-gradient(to right, #1565FF, 50%, #FF003D);
 }
 .top_bar-menu-profile {
   display: -webkit-box;
@@ -133,8 +146,7 @@ body a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100%;
-  width: 100%;
+  width: 17%;
 }
 .top_bar-menu-profile-name {
   font-size: 1.2vw;
@@ -157,31 +169,38 @@ body a:hover {
 }
 .top_bar-menu-profile-login a, .top_bar-menu-profile-sign_up a {
   width: 100%;
-  padding: 1.14vw 0;
+  padding: 0.7vw 0;
   border: 3px solid transparent;
-  -o-border-image: linear-gradient(to right, #00C2FF, #458DCA);
-     border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#458DCA));
-     border-image: linear-gradient(to right, #00C2FF, #458DCA);
+  -o-border-image: linear-gradient(to right, #00C2FF, #1565FF);
+     border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
+     border-image: linear-gradient(to right, #00C2FF, #1565FF);
   border-image-slice: 1;
   text-align: center;
 }
 
 .form-login {
-  height: 40vmax;
-  width: 40vw;
-  background: -webkit-gradient(linear, left bottom, right top, from(#00C2FF), to(#FF003D));
-  background: linear-gradient(to right top, #00C2FF, #FF003D);
+  height: 42vmax;
+  width: 31vw;
+  background: #1565FF;
   position: absolute;
   right: 50%;
   top: 50%;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
   z-index: 999;
+  border-radius: 40px;
+}
+.form-login * {
+  color: #fff;
+}
+.form-login button, .form-login input {
+  border: 4px solid #fff;
+  border-radius: 40px;
 }
 .form-login-blur {
   height: 100vw;
   width: 97vw;
-  background-color: #171C27;
+  background-color: #fff;
   opacity: 0.7;
   position: absolute;
   top: 0;
@@ -204,19 +223,32 @@ body a:hover {
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
 }
-.form-login_container label {
+.form-login_container h2 {
+  margin-bottom: 0.7vw;
   font-weight: bold;
+  text-align: center;
+}
+.form-login_container label {
+  font-size: 1vw;
+  margin: -1.2vw 0 0.7vw;
+}
+.form-login_container label .remember_me {
+  margin-bottom: 0;
+  margin-left: 1vw;
 }
 .form-login_container input {
-  padding: 1.2vw;
-  margin: 0.7vw 0 2.1vw;
-  color: #171C27;
+  padding-left: 1vw;
+  margin: 0.4vw 0 1.7vw;
+  font-size: 1.2vw;
+  line-height: 3.7vw;
+  color: #47525E;
 }
 .form-login_container button {
-  background-color: #171C27;
-  font-weight: bold;
-  padding: 1.2vw;
   margin-top: 0.4vw;
+  background: #1565FF;
+  font-size: 1.7vw;
+  line-height: 4vw;
+  font-weight: bold;
   cursor: pointer;
 }
 .form-login_container a {
@@ -225,21 +257,17 @@ body a:hover {
   line-height: 1.7vw;
 }
 .form-login_container a span {
-  border-bottom: 3px dotted #1565FF;
+  border-bottom: 3px dotted #fff;
   font-size: 1.7vw;
 }
 .form-login_container_cancel {
   position: absolute;
+  background-color: #1565FF;
   top: 1vw;
   right: 1vw;
-  font-size: 1.2vw;
   padding: 0.7vw;
-  background-color: #171C27;
-  border: 3px solid transparent;
-  -o-border-image: linear-gradient(to right, #00C2FF, #458DCA);
-     border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#458DCA));
-     border-image: linear-gradient(to right, #00C2FF, #458DCA);
-  border-image-slice: 1;
+  border: 4px solid #fff;
+  font-size: 1.2vw;
   cursor: pointer;
 }
 .form-login_wrapper {
@@ -263,9 +291,9 @@ body a:hover {
   background-size: cover !important;
   background-position: center !important;
   border: 1px solid #FF003D;
-  -o-border-image: linear-gradient(to right, #00C2FF, #FF003D);
-     border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#FF003D));
-     border-image: linear-gradient(to right, #00C2FF, #FF003D);
+  -o-border-image: linear-gradient(to right, #1565FF, 50%, #FF003D);
+     border-image: -webkit-gradient(linear, left top, right top, from(#1565FF), color-stop(50%), to(#FF003D));
+     border-image: linear-gradient(to right, #1565FF, 50%, #FF003D);
   border-image-slice: 1;
   margin-bottom: 1.7vw;
   text-decoration: none;
@@ -396,7 +424,7 @@ footer .footer a:hover {
   .form-login_container input {
     padding: 1.7vw;
     margin: 1.2vw 0 2.7vw;
-    color: #171C27;
+    color: #fff;
   }
   .form-login_container button {
     padding: 1.7vw;
@@ -415,9 +443,9 @@ footer .footer a:hover {
     font-size: 1.7vw;
     padding: 1.2vw;
     border: 2px solid transparent;
-    -o-border-image: linear-gradient(to right, #00C2FF, #458DCA);
-       border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#458DCA));
-       border-image: linear-gradient(to right, #00C2FF, #458DCA);
+    -o-border-image: linear-gradient(to right, #00C2FF, #1565FF);
+       border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
+       border-image: linear-gradient(to right, #00C2FF, #1565FF);
     border-image-slice: 1;
   }
 
@@ -484,11 +512,11 @@ footer .footer a:hover {
   .top_bar-menu-btn {
     display: block;
     width: 100%;
-    background-color: #131720;
+    background-color: #fafafa;
     border: 3px solid #FF003D;
-    -o-border-image: linear-gradient(to right, #00C2FF, #FF003D);
-       border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#FF003D));
-       border-image: linear-gradient(to right, #00C2FF, #FF003D);
+    -o-border-image: linear-gradient(to right, #1565FF, 50%, #FF003D);
+       border-image: -webkit-gradient(linear, left top, right top, from(#1565FF), color-stop(50%), to(#FF003D));
+       border-image: linear-gradient(to right, #1565FF, 50%, #FF003D);
     border-image-slice: 1;
     font-size: 4vw;
     line-height: 7vw;
@@ -496,7 +524,7 @@ footer .footer a:hover {
   }
   .top_bar-menu-btn_active {
     border: 3px dotted #FF003D;
-    background-color: #37435e;
+    background-color: white;
   }
 
   .form-login {
@@ -514,9 +542,9 @@ footer .footer a:hover {
     font-size: 2.1vw;
     padding: 1.2vw;
     border: 2px solid transparent;
-    -o-border-image: linear-gradient(to right, #00C2FF, #458DCA);
-       border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#458DCA));
-       border-image: linear-gradient(to right, #00C2FF, #458DCA);
+    -o-border-image: linear-gradient(to right, #00C2FF, #1565FF);
+       border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
+       border-image: linear-gradient(to right, #00C2FF, #1565FF);
     border-image-slice: 1;
   }
   .form-login-profile-name {
@@ -596,7 +624,7 @@ footer .footer a:hover {
   .form-login_container input {
     padding: 2.7vw;
     margin: 2.1vw 0 4.6vw;
-    color: #171C27;
+    color: #fff;
   }
   .form-login_container button {
     padding: 2.7vw;
@@ -617,9 +645,9 @@ footer .footer a:hover {
     font-size: 3.4vw;
     padding: 2.1vw;
     border: 2px solid transparent;
-    -o-border-image: linear-gradient(to right, #00C2FF, #458DCA);
-       border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#458DCA));
-       border-image: linear-gradient(to right, #00C2FF, #458DCA);
+    -o-border-image: linear-gradient(to right, #00C2FF, #1565FF);
+       border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
+       border-image: linear-gradient(to right, #00C2FF, #1565FF);
     border-image-slice: 1;
   }
 

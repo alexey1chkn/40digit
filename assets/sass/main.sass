@@ -3,65 +3,70 @@
 
 
 body
-	font-family: 'Rubik', sans-serif
-	background-color: $main-color
+	background-color: lighten($safe_red, 30%)
+	border: 8px solid $default_blue
 	h1
 		font-size: 2.7vw
 		font-weight: bold
 		margin: 1.7vw 0
 		text-align: center
 	*
-		color: $white
+		color: $tm
+		font-family: 'Rubik', sans-serif
 	a
 		text-decoration: none
 		&:hover
-			color: $white
+			color: $safe_red
 
 
 .top_bar
-	margin-top: 0.7vw
-	&-logo
-		display: flex
-		justify-content: center
-		a
-			font-family: 'Product Sans', sans-serif
-			font-weight: bold
-			font-size: 2.7vw
-			line-height: 3vw
-			position: relative
+	margin: 2.7vw
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-items: center
+	&-logo 
+		position: relative
+		margin-right: 3%
+		a		
+			img
+				max-height: 4vw
 		div
 			position: absolute
-			width: 138px
-			height: 48px
-			top: 0
+			width: 4vw
+			height: 4vw
+			bottom: 50%
 			right: 50%
-			transform: translateX(50%)
+			transform: translate(50%, 50%)
 			background: $blue_gradient
-			filter: blur(2.1vw)
+			filter: blur(2.7vw)
+			z-index: -1
 	&-menu
 		&-btn
 			display: none
 		&-main
-			font-size: 1.44vw
 			display: flex
+			flex-direction: row
+			width: 50%
+			margin-right: 3%
 			a
-				background-color: darken($main-color, 2.1%)
 				border: 3px solid transparent
 				border-image: $default_gradient
 				border-image-slice: 1
-				padding: 1.14vw 0
+				padding: 1.2vw 0
 				margin: 0 0.18vw
 				flex-grow: 1
+				font-size: 1.4vw
 				text-align: center
 				vertical-align: middle
 				&.active
+					color: $white
 					background: $default_gradient
 		&-profile
 			display: flex
 			align-items: center
 			justify-content: center
-			height: 100%
-			width: 100%
+			width: 17%
 			&-name
 				font-size: 1.2vw					
 			&-img
@@ -76,7 +81,7 @@ body
 				margin: 0 0.18vw
 				a
 					width: 100%
-					padding: 1.14vw 0
+					padding: 0.7vw 0
 					border: 3px solid transparent
 					border-image: $blue_gradient
 					border-image-slice: 1
@@ -85,14 +90,20 @@ body
 
 .form
 	&-login
-		height: 40vmax
-		width: 40vw
-		background: linear-gradient(to right top, #00C2FF, #FF003D)
+		height: 42vmax
+		width: 31vw
+		background: $default_blue
 		position: absolute
 		right: 50%
 		top: 50%
 		transform: translate(50%, -50%)
 		z-index: 999
+		border-radius: 40px
+		*
+			color: $white
+		button, input
+			border: 4px solid $white
+			border-radius: 40px			
 		&-blur
 			height: 100vw
 			width: 97vw
@@ -110,35 +121,44 @@ body
 			top: 50%
 			right: 50%
 			transform: translate(50%, -50%)
+			h2
+				margin-bottom: 0.7vw
+				font-weight: bold
+				text-align: center				
 			label
-				font-weight: bold
+				font-size: 1vw
+				margin: -1.2vw 0 0.7vw
+				.remember_me
+					margin-bottom: 0
+					margin-left: 1vw
 			input
-				padding: 1.2vw
-				margin: 0.7vw 0 2.1vw
-				color: $main-color				
+				padding-left: 1vw	
+				margin: 0.4vw 0 1.7vw
+				font-size: 1.2vw
+				line-height: 3.7vw
+				color: $tm							
 			button
-				background-color: $main-color
-				font-weight: bold
-				padding: 1.2vw
 				margin-top: 0.4vw
+				background: $default_blue
+				font-size: 1.7vw
+				line-height: 4vw
+				font-weight: bold			
 				cursor: pointer
 			a
 				margin: 1vw auto 0
 				font-size: 1.2vw
 				line-height: 1.7vw
 				span
-					border-bottom: 3px dotted $default_blue
+					border-bottom: 3px dotted $white
 					font-size: 1.7vw
 			&_cancel
 				position: absolute
+				background-color: $default_blue
 				top: 1vw
 				right: 1vw
-				font-size: 1.2vw
 				padding: 0.7vw
-				background-color: $main-color
-				border: 3px solid transparent
-				border-image: $blue_gradient
-				border-image-slice: 1
+				border: 4px solid $white
+				font-size: 1.2vw
 				cursor: pointer
 		&_wrapper
 			display: none
