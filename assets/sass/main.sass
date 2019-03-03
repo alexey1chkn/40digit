@@ -1,0 +1,470 @@
+@import "colors"
+@import "reset"
+
+
+body
+	font-family: 'Rubik', sans-serif
+	background-color: $main-color
+	h1
+		font-size: 2.7vw
+		font-weight: bold
+		margin: 1.7vw 0
+		text-align: center
+	*
+		color: $white
+	a
+		text-decoration: none
+		&:hover
+			color: $white
+
+
+.top_bar
+	margin-top: 0.7vw
+	&-logo
+		display: flex
+		justify-content: center
+		a
+			font-family: 'Product Sans', sans-serif
+			font-weight: bold
+			font-size: 2.7vw
+			line-height: 3vw
+			position: relative
+		div
+			position: absolute
+			width: 138px
+			height: 48px
+			top: 0
+			right: 50%
+			transform: translateX(50%)
+			background: $blue_gradient
+			filter: blur(2.1vw)
+	&-menu
+		&-btn
+			display: none
+		&-main
+			font-size: 1.44vw
+			display: flex
+			a
+				background-color: darken($main-color, 2.1%)
+				border: 3px solid transparent
+				border-image: $default_gradient
+				border-image-slice: 1
+				padding: 1.14vw 0
+				margin: 0 0.18vw
+				flex-grow: 1
+				text-align: center
+				vertical-align: middle
+				&.active
+					background: $default_gradient
+		&-profile
+			display: flex
+			align-items: center
+			justify-content: center
+			height: 100%
+			width: 100%
+			&-name
+				font-size: 1.2vw					
+			&-img
+				width: 3vw
+				height: 3vw
+				background-color: $white
+				border-radius: 50%
+				margin-left: 17px
+			&-login, &-sign_up
+				display: flex
+				flex-grow: 1
+				margin: 0 0.18vw
+				a
+					width: 100%
+					padding: 1.14vw 0
+					border: 3px solid transparent
+					border-image: $blue_gradient
+					border-image-slice: 1
+					text-align: center
+			&-sign_up
+
+.form
+	&-login
+		height: 40vmax
+		width: 40vw
+		background: linear-gradient(to right top, #00C2FF, #FF003D)
+		position: absolute
+		right: 50%
+		top: 50%
+		transform: translate(50%, -50%)
+		z-index: 999
+		&-blur
+			height: 100vw
+			width: 97vw
+			background-color: $main-color
+			opacity: 0.7
+			position: absolute
+			top: 0
+			filter: blur(1.7vw) contrast(.8) brightness(.8)
+			z-index: 998
+		&_container
+			display: flex
+			flex-direction: column
+			font-size: 1.7vw
+			position: absolute
+			top: 50%
+			right: 50%
+			transform: translate(50%, -50%)
+			label
+				font-weight: bold
+			input
+				padding: 1.2vw
+				margin: 0.7vw 0 2.1vw
+				color: $main-color				
+			button
+				background-color: $main-color
+				font-weight: bold
+				padding: 1.2vw
+				margin-top: 0.4vw
+				cursor: pointer
+			a
+				margin: 1vw auto 0
+				font-size: 1.2vw
+				line-height: 1.7vw
+				span
+					border-bottom: 3px dotted $default_blue
+					font-size: 1.7vw
+			&_cancel
+				position: absolute
+				top: 1vw
+				right: 1vw
+				font-size: 1.2vw
+				padding: 0.7vw
+				background-color: $main-color
+				border: 3px solid transparent
+				border-image: $blue_gradient
+				border-image-slice: 1
+				cursor: pointer
+		&_wrapper
+			display: none
+			&_active
+				display: flex
+			
+
+.service_links
+	max-width: 77vw
+	margin: auto
+	margin-top: 0.7vw
+	&-link
+		display: inline-block
+		width: 100%
+		height: 9.5vw
+		background-size: cover !important
+		background-position: center !important
+		border: 1px solid $default-red
+		border-image: $default_gradient
+		border-image-slice: 1
+		margin-bottom: 1.7vw
+		text-decoration: none
+		font-size: 1.4vw
+		line-height: 9.5vw
+		font-weight: bold
+		text-align: center
+		position: relative
+		transition: border 1s ease-out 15s
+		&:hover
+			border: 1px solid $default-red
+			color: $default_blue
+		&:active
+			box-shadow: -0.05vw -0.1vw 0.05vw $white	
+		span
+			opacity: 0
+
+.hover
+	&-red
+		&:hover
+			color: $default-red
+
+footer
+	max-width: 77vw
+	margin: 0.7vw auto
+	.footer
+		display: flex
+		flex-direction: column
+		h3
+			font-weight: bold
+			font-size: 1.7vw
+			padding: 0.4vw 0
+		a
+			font-size: 1vw
+			line-height: 1.7vw
+			padding-left: 0.4vw
+			&:hover
+				color: $default_blue
+				border-bottom: 1px dashed $white
+				border-left: 1px dashed $white
+
+@media (max-width: 1280px)
+
+	.top_bar
+		&-logo
+			div
+				width: 60%
+				filter: blur(2.7vw)
+
+	.service_links
+		max-width: 90vw
+		h1
+			font-size: 3vw
+			line-height: 6vw
+			margin: 0
+		&-link
+			height: 12vw
+			line-height: 12vw			
+	footer
+		margin-top: 2vw
+		max-width: 90vw
+		.footer
+			h3
+				font-size: 2.1vw
+				padding: 0.6vw 0
+			a
+				font-size: 1.4vw
+				line-height: 2.1vw
+				padding-left: 0.6vw		
+
+@media (max-width: 992px)
+	.top_bar
+		&-logo
+			a
+				font-size: 4vw
+				line-height: 6vw
+			div
+				width: 70%
+				height: 6vw
+				filter: blur(4vw)
+		&-menu
+			&-main
+				font-size: 2.1vw
+				line-height: 3vw
+			&-profile
+				&-name
+					font-size: 2.1vw					
+				&-img
+					width: 6vw
+					height: 6vw
+				&-sign_up
+					display: none
+	.form
+		&-login
+			height: 60vw
+			width: 60vw		
+			&-blur
+				height: 100vw
+				width: 90vw
+			&_container
+				font-size: 2.7vw
+				input
+					padding: 1.7vw
+					margin: 1.2vw 0 2.7vw
+					color: $main-color				
+				button
+					padding: 1.7vw
+					margin-top: 0.7vw
+				a
+					margin: 1.7vw auto 0
+					font-size: 1.4vw
+					line-height: 2.1vw
+					span
+						border-bottom: 3px dotted $default_blue
+						font-size: 2.1vw
+				&_cancel
+					font-size: 1.7vw
+					padding: 1.2vw
+					border: 2px solid transparent
+					border-image: $blue_gradient
+					border-image-slice: 1
+
+	.service_links
+		max-width: 100vw
+		h1
+			font-size: 4vw
+			line-height: 7vw
+			margin: 0
+		&-link
+			height: 15vw
+			line-height: 15vw
+			font-size: 2.1vw			
+	footer
+		max-width: 100vw
+		.footer
+			h3
+				font-size: 2.7vw
+				padding: 0.7vw 0
+			a
+				font-size: 1.7vw
+				line-height: 2.7vw
+				padding-left: 0.4vw
+
+@media (max-width: 767px)
+	.top_bar
+		&-logo
+			a
+				font-size: 6vw
+				line-height: 7vw
+			div
+				width: 77%
+				height: 7vw
+				filter: blur(4vw)
+		&-menu
+			&-main
+				display: none
+				&_active
+					position: absolute
+					display: flex
+					height: 100%
+					width: 100vw
+					right: -29.3vw
+					top: 11vw
+					flex-direction: column	
+					z-index: 9999
+					a
+						font-size: 4vw
+						line-height: 7vw							
+			&-btn
+				display: block
+				width: 100%
+				background-color: darken($main-color, 2.1%)
+				border: 3px solid $default-red
+				border-image: $default_gradient
+				border-image-slice: 1
+				font-size: 4vw
+				line-height: 7vw
+				text-align: center
+				&_active
+					border: 3px dotted $default-red
+					background-color: lighten($main-color, 17%)
+	.form
+		&-login
+			height: 70vw
+			width: 70vw		
+			&-blur
+				height: 100vw
+				width: 90vw
+			&_container
+				font-size: 3.1vw
+				&_cancel
+					font-size: 2.1vw
+					padding: 1.2vw
+					border: 2px solid transparent
+					border-image: $blue_gradient
+					border-image-slice: 1
+
+			&-profile
+				&-name
+					font-size: 2.7vw					
+				&-img
+					width: 7vw
+					height: 7vw
+
+	.service_links
+		h1
+			font-size: 7vw
+			line-height: 11vw
+			margin-bottom: 0
+		&-link
+			height: 50vw
+			font-size: 6vw
+			line-height: 50vw	
+
+	footer
+		margin-bottom: 3.7vw
+		.footer
+			h3
+				font-weight: bold
+				font-size: 4vw
+				padding: 3vw 0 1.7vw
+			a
+				font-size: 2.7vw
+				line-height: 3.7vw
+				padding: 0.7vw 0 1.2vw 1.7vw
+				&:hover
+					color: $default_blue
+					border-bottom: 1px dashed $white
+					border-left: 1px dashed $white
+
+@media (max-width: 576px)
+	.top_bar
+		&-logo
+			a
+				font-size: 7vw
+				line-height: 9vw
+			div
+				height: 9vw
+				filter: blur(7vw)
+		&-menu
+			&-btn
+				font-size: 4.6vw
+				line-height: 9vw
+			&-profile
+				&-login
+					line-height: 4.6vw
+				&-name
+					font-size: 2.1vw					
+				&-img
+					width: 6vw
+					height: 6vw
+	.form
+		&-login
+			height: 80vh
+			width: 90vw		
+			&-blur
+				height: 127vw
+				width: 90vw
+			&_container
+				font-size: 4.6vw
+				input
+					padding: 2.7vw
+					margin: 2.1vw 0 4.6vw
+					color: $main-color				
+				button
+					padding: 2.7vw
+					margin-top: 1.7vw
+				a
+					margin: 3.7vw auto 0
+					font-size: 2.7vw
+					line-height: 2.7vw
+					span
+						border-bottom: 3px dotted $default_blue
+						font-size: 3.7vw
+				&_cancel
+					top: 2vw
+					right: 2vw
+					font-size: 3.4vw
+					padding: 2.1vw
+					border: 2px solid transparent
+					border-image: $blue_gradient
+					border-image-slice: 1
+	.service_links
+			&-link
+				height: 50vw
+				font-size: 6vw
+				line-height: 50vw
+	body
+		h1
+			font-size: 7vw
+			margin: 1.7vw 0
+	footer
+		margin-bottom: 3.7vw
+		.footer
+			h3
+				font-weight: bold
+				font-size: 6vw
+				padding: 6vw 0 2.7vw
+			a
+				font-size: 3.7vw
+				line-height: 4.7vw
+				padding: 0.7vw 0 1.2vw 1.7vw
+				&:hover
+					color: $default_blue
+					border-bottom: 1px dashed $white
+					border-left: 1px dashed $white
+
+
+	// linear-gradient(to right, #00C2FF, #FF003D)
+	// filter: drop-shadow(0px 10px 20px rgba(55, 123, 255, 0.1))
