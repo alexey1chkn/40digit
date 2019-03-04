@@ -1,5 +1,4 @@
-<?php require 'db.php';
-
+<?php
 if (!empty($_COOKIE['sid'])) {
     // check session id in cookies
     session_id($_COOKIE['sid']);
@@ -33,43 +32,36 @@ require_once './modules/login/classes/Auth.class.php';
         </a>
       </div>
       <nav class="top_bar-menu-main">
-        <a href="/" class="active">Главная</a>
-        <a href="">Услуги</a>
-        <a href="">Партнёрам</a>
-        <a href="">FAQ</a>
+        <a href="/" class="active"><h4>Главная</h4></a>
+        <a href=""><h4>Услуги</h4></a>
+        <a href=""><h4>Партнёрам</h4></a>
+        <a href=""><h4>FAQ</h4></a>
       </nav>
-        <?php $login = 12; echo $login == 1 ? '<a href="">' : ''; ?>
         <div class="top_bar-menu-profile">
           <!-- Если залогинен - имя и картинка, если нет - кнопка регистрация и вход -->
+          <?php $login = 11; echo $login == 1 ? '<a href="" id="top_bar_profile">' : ''; ?>
           <?php
             $login_tb = '
-              <div class="top_bar-menu-profile-name">
-                <span>Алексей</span>
-              </div>
-              <div class="top_bar-menu-profile-img">
-                <div></div>
-              </div>';
+                <h4>Алексей</h4>
+                <div><img src="" alt=""></div>';
             $unlogin = '
             <div class="top_bar-menu-profile-login">
-              <a href="">Вход</a>
-            </div>
-            <div class="top_bar-menu-profile-sign_up">
-              <a href="">Регистрация</a>
+              <a href=""><h4>Личный кабинет</h4></a>
             </div>';
             echo $login == 1 ? $login_tb : $unlogin;
           ?>
+          <?php echo $login == 1 ? '</a>' : ''; ?>
         </div>
-        <?php echo $login == 1 ? '</a>' : ''; ?>
       </div> 
       <div class="form-login_wrapper">
         <div class="form-login-blur">
         </div>
         <div class="form-login">
           <form method="post" class="form-signin ajax" action="<?php $_SERVER['DOCUMENT_ROOT']; ?>/modules/ajax.php">
-            <button type="button" class="form-login_container_cancel">Закрыть</button>
+            <button type="button" class="form-login_container_cancel"><p>Закрыть</p></button>
             <div class="form-login_container">
               <div class="main-error alert alert-error hide"></div>
-              <h2 class="form-signin-heading">Вход в кабинет</h2>
+              <h3 class="form-signin-heading">Вход в кабинет</h2>
 
               <input name="username" type="text" class="input-block-level" placeholder="Введите логин" autofocus required>
         
@@ -78,8 +70,8 @@ require_once './modules/login/classes/Auth.class.php';
                 <input name="remember-me" class="remember_me" type="checkbox" value="remember-me" checked> Запомнить меня
               </label>
               <input type="hidden" name="act" value="login">          
-              <button type="submit">Войти</button>
-              <a href="">или <span>Зарегистрироваться</span></a>
+              <button type="submit"><h4>Войти</h4></button>
+              <a href=""><p>или</p><h4>Зарегистрироваться</h4></a>
             </div>
         
             <!-- <div class="container">

@@ -1,92 +1,110 @@
 @import "colors"
 @import "reset"
 
+html
+	h1
+		font-style: normal
+		font-weight: 500
+		font-size: 48px
+	h2
+		font-style: normal
+		font-weight: 500
+		font-size: 36px
+	h3
+		font-style: normal
+		font-weight: 500
+		font-size: 30px
+	h4
+		font-style: normal
+		font-weight: 500
+		font-size: 24px
+	p
+		font-style: normal
+		font-weight: normal
+		line-height: normal
+		font-size: 19px
 
 body
 	border: 8px solid $default_blue
-	h1
-		font-size: 2.7vw
-		font-weight: bold
-		margin: 1.7vw 0
-		text-align: center
+	overflow-x: hidden
 	*
 		color: $tm
 		font-family: 'Rubik', sans-serif
 	a
 		text-decoration: none
 		&:hover
-			
 
+.wrapper
+	max-width: 1520px
+	margin: auto
+
+			
 .top_bar
-	margin: 2.7vw
+	margin: 1.7vw
 	display: flex
 	flex-direction: row
 	justify-content: center
 	align-items: center
-	&-logo 
-		position: relative
-		margin-right: 3%
+	&-logo
+		max-width: 7%
+		margin-right: 5%
 		a		
 			img
 				max-height: 4vw
-		div
-			position: absolute
-			width: 4vw
-			height: 4vw
-			bottom: 50%
-			right: 50%
-			transform: translate(50%, 50%)
-			background: $blue_gradient
-			filter: blur(4vw)
-			z-index: -1
 	&-menu
 		&-btn
 			display: none
 		&-main
 			display: flex
 			flex-direction: row
-			width: 50%
+			max-width: 71%
+			width: 100%
 			margin-right: 3%
 			a
+				margin: 0 0.18vw	
+				flex-grow: 1
 				border: 4px solid transparent
 				border-image: $blue_gradient
 				border-image-slice: 1
-				padding: 1.2vw 0
-				margin: 0 0.18vw
-				flex-grow: 1
-				font-size: 1.4vw
+				line-height: 4rem
 				text-align: center
 				vertical-align: middle
 				&.active
-					color: $white
-					font-weight: bold
 					background: $blue_gradient
+					h4
+						color: $white
+						font-weight: bold					
 				&:hover
-					color: $white
 					background: $blue_gradient
+					h4
+						color: $white
 		&-profile
 			display: flex
 			align-items: center
 			justify-content: center
-			width: 17%
-			&-name
-				font-size: 1.2vw					
-			&-img
-				width: 3vw
-				height: 3vw
-				background-color: $white
-				border-radius: 50%
-				margin-left: 17px
-			&-login, &-sign_up
+			flex-direction: row
+			max-width: 17%
+			width: 100%
+			a#top_bar_profile
 				display: flex
-				flex-grow: 1
-				margin: 0 0.18vw
+				align-items: center
+				justify-content: center
+				width: 100%
+				div
+					width: 4rem
+					height: 4rem
+					background-color: $blue_uc
+					border-radius: 50%
+					margin-left: 17px
+			&-login
+				display: flex
+				width: 100%
 				a
 					width: 100%
-					padding: 0.7vw 0
 					border: 3px solid transparent
 					border-image: $blue_gradient
 					border-image-slice: 1
+					line-height: 3rem
 					text-align: center
 					&:hover
 						color: $white
@@ -95,90 +113,103 @@ body
 
 .form
 	&-login
-		height: 44vw
-		width: 31vw
-		background: $default_blue
 		position: absolute
 		right: 50%
 		top: 50%
 		transform: translate(50%, -50%)
+		height: 44vw
+		width: 31vw
+		background: $default_blue
+		border-radius: 17px
 		z-index: 999
-		border-radius: 40px
 		*
 			color: $white
 		button, input
 			border: 4px solid $white
-			border-radius: 40px			
+			border-radius: 17px			
 		&-blur
-			height: 100vw
-			width: 97vw
-			background-color: $main-color
-			opacity: 0.7
+			height: 100vh
+			width: 100vw
+			background-color: $tm
+			opacity: 0.4
 			position: absolute
 			top: 0
-			filter: blur(1.7vw) contrast(.8) brightness(.8)
+			left: 0
+			filter: blur(7px) contrast(.8) brightness(.8)
 			z-index: 998
 		&_container
 			display: flex
+			width: 60%
 			flex-direction: column
-			font-size: 1.7vw
 			position: absolute
 			top: 50%
 			right: 50%
 			transform: translate(50%, -50%)
-			h2
+			h3
 				margin-bottom: 0.7vw
 				font-weight: bold
 				text-align: center				
 			label
-				font-size: 1vw
-				margin: -1.2vw 0 0.7vw
+				font-size: 1rem
+				margin: -0.7vw 0 0.7vw
 				.remember_me
 					margin-bottom: 0
 					margin-left: 1vw
 			input
 				padding-left: 1vw	
-				margin: 0.4vw 0 1.7vw
-				font-size: 1.2vw
-				line-height: 3.7vw
+				margin: 0.7vw 0vw
+				font-size: 1.2rem
+				line-height: 3.6rem
 				color: $tm							
 			button
-				margin-top: 0.4vw
+				margin-top: 0.7vw
 				background: $default_blue
-				font-size: 1.7vw
-				line-height: 4vw
+				line-height: 3rem
 				font-weight: bold			
 				cursor: pointer
 			a
-				margin: 1vw auto 0
-				font-size: 1.2vw
-				line-height: 1.7vw
-				span
+				margin: 1.7vw auto 0
+				&:hover
+					p
+						color: $safe_red
+					h4
+						border-bottom: 3px dotted $safe_red
+				h4
 					border-bottom: 3px dotted $white
-					font-size: 1.7vw
+					line-height: 2rem
 			&_cancel
 				position: absolute
 				background-color: $default_blue
-				top: 1vw
-				right: 1vw
+				top: 3%
+				right: 5%
 				padding: 0.7vw
 				border: 4px solid $white
-				font-size: 1.2vw
 				cursor: pointer
 		&_wrapper
 			display: none
 			&_active
 				display: flex
-			
 
-.service_links
-	max-width: 70%
-	margin: auto
-	margin-top: 0.7vw
+.service_block
+	max-width: 100%
 	&-links
-		display: flex
-		flex-direction: row
-		flex-wrap: wrap
+		height: 127vh
+		margin-top: 0.7vw
+		&-grid-container
+			height: 100% 			
+			display: grid
+			grid-gap: 2em
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+			grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
+			grid-template-areas: "service_block-links-development service_block-links-development service_block-links-development service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links--consultation service_block-links--consultation" "service_block-links-development service_block-links-development service_block-links-development service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links--consultation service_block-links--consultation" "service_block-links-security service_block-links-security service_block-links-security service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links--consultation service_block-links--consultation" "service_block-links-security service_block-links-security service_block-links-security service_block-links-design service_block-links-design service_block-links-design service_block-links--service service_block-links--service service_block-links--service" "service_block-links-job service_block-links-job service_block-links-job service_block-links-design service_block-links-design service_block-links-design service_block-links--service service_block-links--service service_block-links--service" "service_block-links-job service_block-links-job service_block-links-job  service_block-links-others service_block-links-others service_block-links-others service_block-links-others service_block-links-others service_block-links-others" "service_block-links-job service_block-links-job service_block-links-job  service_block-links-others service_block-links-others service_block-links-others service_block-links-others service_block-links-others service_block-links-others"
+			a
+				background-size: cover !important
+				background-position: center !important
+				color: red
+				height: 100%
+				border: 4px solid $blue_uc
+				border-image: $blue_gradient
+				border-image-slice: 1
 		.service_links-link
 			display: flex
 			justify-content: center
@@ -194,42 +225,79 @@ body
 			font-size: 1.4vw
 			font-weight: bold
 			position: relative
-			&:first-child
-				width: 30%
-				
-				
-
+			h3
+				position: absolute
+				border: 4px dashed $blue_uc
+				padding: 1rem
+				background-color: $white
+				font-weight: bold
+				color: $blue_uc					
 			&:hover
-				border: 4px solid $default-red
-				color: $default_blue
+				border: 4px solid $blue_uc
 			&:active
 				box-shadow: -0.05vw -0.1vw 0.05vw $white	
 			span
-				opacity: 0
+				opacity: 0				
+		&-development
+			grid-area: service_block-links-development
+			a.service_links-link
+				h3
+					top: 50%
+					left: 22%
+					padding: 1.7rem 1rem
+					transform: translateY(-50%)
+		&-hosting
+			grid-area: service_block-links-hosting
+			a.service_links-link
+				h3
+					position: absolute
+					bottom: 10%
+					border: 3px dashed $blue_uc
+					padding: 1rem
+					background-color: $white
+					font-weight: bold
+					color: $blue_uc
+		&--consultation
+			grid-area: service_block-links--consultation
+			h3
+				color: $white
+		&-security
+			grid-area: service_block-links-security
+		&-design
+			grid-area: service_block-links-design
+		&--service
+			grid-area: service_block-links--service
+		&-job
+			grid-area: service_block-links-job
+		&-others
+			grid-area: service_block-links-others
 
-.hover
-	&-red
-		&:hover
-			color: $default-red
 
 footer
-	max-width: 77vw
-	margin: 0.7vw auto
-	.footer
-		display: flex
-		flex-direction: column
-		h3
-			font-weight: bold
-			font-size: 1.7vw
-			padding: 0.4vw 0
-		a
-			font-size: 1vw
-			line-height: 1.7vw
-			padding-left: 0.4vw
-			&:hover
-				color: $default_blue
-				border-bottom: 1px dashed $white
-				border-left: 1px dashed $white
+	margin-top: 2.7vw
+	background-color: lighten($default_blue, 30%)
+	#footer
+		display: grid
+		max-width: 1520px
+		margin: auto
+		padding: 0.7vw 0
+		grid-gap: 2em
+		grid-template-columns: repeat(4, 1fr)
+		.footer
+			display: flex
+			flex-direction: column
+			h3
+				font-weight: bold
+				font-size: 1.7vw
+				padding: 0.4vw 0
+			a
+				font-size: 1vw
+				line-height: 1.7vw
+				padding-left: 0.4vw
+				&:hover
+					color: $default_blue
+					border-bottom: 1px dashed $white
+					border-left: 1px dashed $white
 
 @media (max-width: 1280px)
 
