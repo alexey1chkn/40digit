@@ -45,7 +45,6 @@ table {
 }
 
 body {
-  background-color: white;
   border: 8px solid #1565FF;
 }
 body h1 {
@@ -60,9 +59,6 @@ body * {
 }
 body a {
   text-decoration: none;
-}
-body a:hover {
-  color: #FA8072;
 }
 
 .top_bar {
@@ -98,8 +94,8 @@ body a:hover {
           transform: translate(50%, 50%);
   background: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
   background: linear-gradient(to right, #00C2FF, #1565FF);
-  -webkit-filter: blur(2.7vw);
-          filter: blur(2.7vw);
+  -webkit-filter: blur(4vw);
+          filter: blur(4vw);
   z-index: -1;
 }
 .top_bar-menu-btn {
@@ -117,10 +113,10 @@ body a:hover {
   margin-right: 3%;
 }
 .top_bar-menu-main a {
-  border: 3px solid transparent;
-  -o-border-image: linear-gradient(to right, #1565FF, 50%, #FF003D);
-     border-image: -webkit-gradient(linear, left top, right top, from(#1565FF), color-stop(50%), to(#FF003D));
-     border-image: linear-gradient(to right, #1565FF, 50%, #FF003D);
+  border: 4px solid transparent;
+  -o-border-image: linear-gradient(to right, #00C2FF, #1565FF);
+     border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
+     border-image: linear-gradient(to right, #00C2FF, #1565FF);
   border-image-slice: 1;
   padding: 1.2vw 0;
   margin: 0 0.18vw;
@@ -133,8 +129,14 @@ body a:hover {
 }
 .top_bar-menu-main a.active {
   color: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(#1565FF), color-stop(50%), to(#FF003D));
-  background: linear-gradient(to right, #1565FF, 50%, #FF003D);
+  font-weight: bold;
+  background: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
+  background: linear-gradient(to right, #00C2FF, #1565FF);
+}
+.top_bar-menu-main a:hover {
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
+  background: linear-gradient(to right, #00C2FF, #1565FF);
 }
 .top_bar-menu-profile {
   display: -webkit-box;
@@ -177,9 +179,14 @@ body a:hover {
   border-image-slice: 1;
   text-align: center;
 }
+.top_bar-menu-profile-login a:hover, .top_bar-menu-profile-sign_up a:hover {
+  color: #fff;
+  background: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
+  background: linear-gradient(to right, #00C2FF, #1565FF);
+}
 
 .form-login {
-  height: 42vmax;
+  height: 44vw;
   width: 31vw;
   background: #1565FF;
   position: absolute;
@@ -280,40 +287,58 @@ body a:hover {
 }
 
 .service_links {
-  max-width: 77vw;
+  max-width: 70%;
   margin: auto;
   margin-top: 0.7vw;
 }
-.service_links-link {
-  display: inline-block;
-  width: 100%;
-  height: 9.5vw;
+.service_links-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.service_links-links .service_links-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 7vw;
   background-size: cover !important;
   background-position: center !important;
-  border: 1px solid #FF003D;
-  -o-border-image: linear-gradient(to right, #1565FF, 50%, #FF003D);
-     border-image: -webkit-gradient(linear, left top, right top, from(#1565FF), color-stop(50%), to(#FF003D));
-     border-image: linear-gradient(to right, #1565FF, 50%, #FF003D);
+  border: 4px solid #175EE8;
+  -o-border-image: linear-gradient(to right, #00C2FF, #1565FF);
+     border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
+     border-image: linear-gradient(to right, #00C2FF, #1565FF);
   border-image-slice: 1;
-  margin-bottom: 1.7vw;
   text-decoration: none;
-  font-size: 1.4vw;
-  line-height: 9.5vw;
-  font-weight: bold;
-  text-align: center;
-  position: relative;
   -webkit-transition: border 1s ease-out 15s;
   transition: border 1s ease-out 15s;
+  font-size: 1.4vw;
+  font-weight: bold;
+  position: relative;
 }
-.service_links-link:hover {
-  border: 1px solid #FF003D;
+.service_links-links .service_links-link:first-child {
+  width: 30%;
+}
+.service_links-links .service_links-link:hover {
+  border: 4px solid #FF003D;
   color: #1565FF;
 }
-.service_links-link:active {
+.service_links-links .service_links-link:active {
   -webkit-box-shadow: -0.05vw -0.1vw 0.05vw #fff;
           box-shadow: -0.05vw -0.1vw 0.05vw #fff;
 }
-.service_links-link span {
+.service_links-links .service_links-link span {
   opacity: 0;
 }
 

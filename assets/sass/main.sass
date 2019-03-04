@@ -3,7 +3,6 @@
 
 
 body
-	background-color: lighten($safe_red, 30%)
 	border: 8px solid $default_blue
 	h1
 		font-size: 2.7vw
@@ -16,8 +15,7 @@ body
 	a
 		text-decoration: none
 		&:hover
-			color: $safe_red
-
+			
 
 .top_bar
 	margin: 2.7vw
@@ -39,7 +37,7 @@ body
 			right: 50%
 			transform: translate(50%, 50%)
 			background: $blue_gradient
-			filter: blur(2.7vw)
+			filter: blur(4vw)
 			z-index: -1
 	&-menu
 		&-btn
@@ -50,8 +48,8 @@ body
 			width: 50%
 			margin-right: 3%
 			a
-				border: 3px solid transparent
-				border-image: $default_gradient
+				border: 4px solid transparent
+				border-image: $blue_gradient
 				border-image-slice: 1
 				padding: 1.2vw 0
 				margin: 0 0.18vw
@@ -61,7 +59,11 @@ body
 				vertical-align: middle
 				&.active
 					color: $white
-					background: $default_gradient
+					font-weight: bold
+					background: $blue_gradient
+				&:hover
+					color: $white
+					background: $blue_gradient
 		&-profile
 			display: flex
 			align-items: center
@@ -86,11 +88,14 @@ body
 					border-image: $blue_gradient
 					border-image-slice: 1
 					text-align: center
+					&:hover
+						color: $white
+						background: $blue_gradient
 			&-sign_up
 
 .form
 	&-login
-		height: 42vmax
+		height: 44vw
 		width: 31vw
 		background: $default_blue
 		position: absolute
@@ -167,33 +172,40 @@ body
 			
 
 .service_links
-	max-width: 77vw
+	max-width: 70%
 	margin: auto
 	margin-top: 0.7vw
-	&-link
-		display: inline-block
-		width: 100%
-		height: 9.5vw
-		background-size: cover !important
-		background-position: center !important
-		border: 1px solid $default-red
-		border-image: $default_gradient
-		border-image-slice: 1
-		margin-bottom: 1.7vw
-		text-decoration: none
-		font-size: 1.4vw
-		line-height: 9.5vw
-		font-weight: bold
-		text-align: center
-		position: relative
-		transition: border 1s ease-out 15s
-		&:hover
-			border: 1px solid $default-red
-			color: $default_blue
-		&:active
-			box-shadow: -0.05vw -0.1vw 0.05vw $white	
-		span
-			opacity: 0
+	&-links
+		display: flex
+		flex-direction: row
+		flex-wrap: wrap
+		.service_links-link
+			display: flex
+			justify-content: center
+			align-items: center
+			min-height: 7vw
+			background-size: cover !important
+			background-position: center !important
+			border: 4px solid $blue_uc
+			border-image: $blue_gradient
+			border-image-slice: 1
+			text-decoration: none
+			transition: border 1s ease-out 15s
+			font-size: 1.4vw
+			font-weight: bold
+			position: relative
+			&:first-child
+				width: 30%
+				
+				
+
+			&:hover
+				border: 4px solid $default-red
+				color: $default_blue
+			&:active
+				box-shadow: -0.05vw -0.1vw 0.05vw $white	
+			span
+				opacity: 0
 
 .hover
 	&-red

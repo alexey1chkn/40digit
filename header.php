@@ -29,8 +29,7 @@ require_once './modules/login/classes/Auth.class.php';
     <div class="top_bar">
       <div class="top_bar-logo">     
         <a href="/">
-          <img src="<?php $_SERVER['DOCUMENT_ROOT']; ?>/assets/img/logo.png" alt="">
-          <div></div>
+          <img src="<?php $_SERVER['DOCUMENT_ROOT']; ?>/assets/img/logo2.png" alt="">
         </a>
       </div>
       <nav class="top_bar-menu-main">
