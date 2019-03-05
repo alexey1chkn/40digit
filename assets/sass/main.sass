@@ -32,15 +32,58 @@ body
 		font-family: 'Rubik', sans-serif
 	a
 		text-decoration: none
-		&:hover
+.black
+	background-color: $black
+	*
+		color: $white
+
 
 .wrapper
 	max-width: 1520px
-	margin: auto
+	margin: auto	
+	.change
+		&_theme
+			position: absolute
+			top: 0
+			left: 50%
+			transform: translate(-50%, 0)
+			display: inline-block
+			padding: 10px 17px
+			border-radius: 0 0 10px 10px
+			background-color: $default_blue
+			transition-property: padding-top
+			transition-duration: 0.3s
+			*
+				color: $white
+			&:hover
+				padding-top: 85px
+				.change_theme-black
+					display: flex
+			&-black				
+				display: none
+				position: absolute
+				top: 17px
+				left: 50%
+				transform: translate(-50%, 0)
+				width: 100%
+				justify-content: center
+				align-items: center
+				cursor: pointer
+				padding-bottom: 4%
+				&:hover
+					border-bottom: 2px dashed $white
+			&-icon
+				display: inline-block
+				width: 50px
+				height: 50px
+				background-color: $black
+				border-radius: 50%
+				margin-right: 5%
+					
 
 			
 .top_bar
-	margin: 1.7vw
+	margin: 2.7vw 2.7vw 1.7vw
 	display: flex
 	flex-direction: row
 	justify-content: center
@@ -201,7 +244,7 @@ body
 			grid-gap: 2em
 			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr
 			grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr
-			grid-template-areas: "service_block-links-development service_block-links-development service_block-links-development service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links--consultation service_block-links--consultation" "service_block-links-development service_block-links-development service_block-links-development service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links--consultation service_block-links--consultation" "service_block-links-security service_block-links-security service_block-links-security service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links--consultation service_block-links--consultation" "service_block-links-security service_block-links-security service_block-links-security service_block-links-design service_block-links-design service_block-links-design service_block-links--service service_block-links--service service_block-links--service" "service_block-links-job service_block-links-job service_block-links-job service_block-links-design service_block-links-design service_block-links-design service_block-links--service service_block-links--service service_block-links--service" "service_block-links-job service_block-links-job service_block-links-job  service_block-links-others service_block-links-others service_block-links-others service_block-links-others service_block-links-others service_block-links-others" "service_block-links-job service_block-links-job service_block-links-job  service_block-links-others service_block-links-others service_block-links-others service_block-links-others service_block-links-others service_block-links-others"
+			grid-template-areas: "service_block-links-development service_block-links-development service_block-links-development service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links--consultation service_block-links--consultation"			"service_block-links-development service_block-links-development service_block-links-development service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links--consultation service_block-links--consultation" 			" service_block-links-design service_block-links-design service_block-links-design service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links-hosting service_block-links--consultation service_block-links--consultation" 			"service_block-links-design service_block-links-design service_block-links-design service_block-links-promotion service_block-links-promotion service_block-links-promotion service_block-links--service service_block-links--service service_block-links--service" 			"service_block-links-job service_block-links-job service_block-links-job service_block-links-promotion service_block-links-promotion service_block-links-promotion service_block-links--service service_block-links--service service_block-links--service" 			"service_block-links-job service_block-links-job service_block-links-job service_block-links-security service_block-links-security service_block-links-security  service_block-links-others service_block-links-others service_block-links-others " 			"service_block-links-job service_block-links-job service_block-links-job  service_block-links-security service_block-links-security service_block-links-security service_block-links-others service_block-links-others service_block-links-others"
 			a
 				background-size: cover !important
 				background-position: center !important
@@ -237,7 +280,11 @@ body
 			&:active
 				box-shadow: -0.05vw -0.1vw 0.05vw $white	
 			span
-				opacity: 0				
+				opacity: 0	
+		.service_links-link.black
+			h3
+				background-color: $black
+
 		&-development
 			grid-area: service_block-links-development
 			a.service_links-link
@@ -257,6 +304,9 @@ body
 					background-color: $white
 					font-weight: bold
 					color: $blue_uc
+			a.black
+				h3
+					background-color: $black
 		&--consultation
 			grid-area: service_block-links--consultation
 			h3
@@ -269,6 +319,8 @@ body
 			grid-area: service_block-links--service
 		&-job
 			grid-area: service_block-links-job
+		&-promotion
+			grid-area: service_block-links-promotion
 		&-others
 			grid-area: service_block-links-others
 

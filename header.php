@@ -25,6 +25,12 @@ require_once './modules/login/classes/Auth.class.php';
 </head>
 <body>
   <div class="wrapper">
+
+      <div class="change_theme">
+        <div class="change_theme-black"><div class="change_theme-icon"></div><p>Тёмная тема</p></div>
+        <h4>Сменить тему</h4>
+      </div>
+    
     <div class="top_bar">
       <div class="top_bar-logo">     
         <a href="/">

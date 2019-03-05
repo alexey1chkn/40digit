@@ -9,6 +9,7 @@
 		  <div class="service_block-links-design"><a href="" class="service_links-link" style="background: url(assets/img/7.webp) no-repeat"><h3>Дизайн</h3></a></div>
 		  <div class="service_block-links--service"><a href="" class="service_links-link" style="background: url(assets/img/3.webp) no-repeat"><h3>Обслуживание</h3></a></div>
 		  <div class="service_block-links-job"><a href="" class="service_links-link" style="background: url(assets/img/12.webp) no-repeat"><h3>Работа</h3></a></div>
+		  <div class="service_block-links-promotion"><a href="" class="service_links-link" style="background: url(assets/img/10.webp) no-repeat"><h3>Продвижение</h3></a></div>
 		  <div class="service_block-links-others"><a href="" class="service_links-link" style="background: url(assets/img/10.webp) no-repeat"><h3>Другие услуги</h3></a></div>
 		</div>
 	</div>
