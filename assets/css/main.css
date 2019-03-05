@@ -82,9 +82,18 @@ body * {
 body a {
   text-decoration: none;
 }
+body .page_content {
+  position: absolute;
+  top: 0;
+  bottom: -40rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0.4;
+}
 
 .black {
-  background-color: #000;
+  background-color: #131820;
 }
 .black * {
   color: #fff;
@@ -144,7 +153,7 @@ body a {
   display: inline-block;
   width: 50px;
   height: 50px;
-  background-color: #000;
+  background-color: #131820;
   border-radius: 50%;
   margin-right: 5%;
 }
@@ -448,7 +457,7 @@ body a {
   opacity: 0;
 }
 .service_block-links .service_links-link.black h3 {
-  background-color: #000;
+  background-color: #131820;
 }
 .service_block-links-development {
   grid-area: service_block-links-development;
@@ -473,7 +482,7 @@ body a {
   color: #175EE8;
 }
 .service_block-links-hosting a.black h3 {
-  background-color: #000;
+  background-color: #131820;
 }
 .service_block-links--consultation {
   grid-area: service_block-links--consultation;

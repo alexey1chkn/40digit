@@ -6,6 +6,9 @@ if (!empty($_COOKIE['sid'])) {
 
 session_start();
 require_once './modules/login/classes/Auth.class.php';
+
+if(isset($_GET['theme']))
+  setcookie("theme", $_GET['theme'], time() + 259200);
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -23,13 +26,14 @@ require_once './modules/login/classes/Auth.class.php';
   <link href="<?php $_SERVER['DOCUMENT_ROOT']; ?>/assets/css/main.css" rel="stylesheet">
   <link href="<?php $_SERVER['DOCUMENT_ROOT']; ?>/assets/img/Hk9ETu_Rxp4.jpg" rel="shortcut icon" type="image/x-icon" />
 </head>
-<body>
-  <div class="wrapper">
-
-      <div class="change_theme">
-        <div class="change_theme-black"><div class="change_theme-icon"></div><p>Тёмная тема</p></div>
-        <h4>Сменить тему</h4>
-      </div>
+<?php echo $_COOKIE['theme'] == 1 ? $dark_style = 'black' : $dark_style = ''?>
+<body class="<?php echo $dark_style ?>">
+  <div class="page_content <?php echo $_COOKIE['theme'] == 1 ? 'black' : ''?>" style="<?php echo $_COOKIE['theme'] == 1 ? 'background: url(assets/img/1112.png) repeat' : 'background: url(assets/img/2222.png) repeat'?>"></div>
+  <div class="wrapper"> 
+    <div class="change_theme">
+      <div class="change_theme-black"><div class="change_theme-icon"></div><p>Тёмная тема</p></div>
+      <h4>Сменить тему</h4>
+    </div>
     
     <div class="top_bar">
       <div class="top_bar-logo">     

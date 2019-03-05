@@ -51,7 +51,6 @@
 	<!-- SCRIPTS -->
 	<!-- JQuery -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	
 	<!-- Custom_scripts -->
 	<script src="<?php $_SERVER['DOCUMENT_ROOT']; ?>/modules/login/vendor/jquery-2.0.3.min.js"></script>
 	<script src="<?php $_SERVER['DOCUMENT_ROOT']; ?>/modules/login/js/ajax-form.js"></script>
@@ -60,9 +59,14 @@
 		$path = $_SERVER['PHP_SELF'];
 		$file = basename($path, ".php");
 	?>
+		<script>
+			var $theme_number = "<?php $_COOKIE['theme']; ?>";
+		</script>
 	<?php if ( $file == "index" ):?>
 		<script src="<?php $_SERVER['DOCUMENT_ROOT']; ?>/animation/main_page_anim.js"></script>
 	<?php endif;?>
+
+
 	
 
 </body>

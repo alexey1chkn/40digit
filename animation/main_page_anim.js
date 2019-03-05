@@ -14,16 +14,10 @@ $('.form-login_container_cancel').on('click', function(e) {
   $('.form-login_wrapper').removeClass('form-login_wrapper_active');
 });
 
-$('.change_theme').on('click', function(e) {
+$('.change_theme-black').on('click', function(e) {
   e.preventDefault();
-  change_theme_on_black();
-  $theme_number = 1;
-  console.log($theme_number);
+  $(location).attr('href', "?theme=1")
 });
-
-if ($theme_number == 1){
-	change_theme_on_black();
-}
 
 function change_theme_on_black(){
 	$('body').toggleClass('black');
