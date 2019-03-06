@@ -12,5 +12,6 @@
 		  <div class="service_block-links-promotion"><a href="" class="service_links-link <?php echo $dark_style ?>" style="background: url(assets/img/10.webp) no-repeat"><h4>Продвижение</h4></a></div>
 		  <div class="service_block-links-others"><a href="" class="service_links-link <?php echo $dark_style ?>" style="background: url(assets/img/10.webp) no-repeat"><h4>Другие услуги</h4></a></div>
 		</div>
+		<div class="s"></div>
 	</div>
 </div>
