@@ -44,6 +44,9 @@ table {
   border-spacing: 0;
 }
 
+html {
+  font-size: 16px;
+}
 html h1 {
   font-style: normal;
   font-weight: 500;
@@ -75,6 +78,9 @@ body {
   border: 8px solid #1565FF;
   overflow-x: hidden;
 }
+body.black {
+  border: 8px solid #1565FF;
+}
 body * {
   color: #47525E;
   font-family: "Rubik", sans-serif;
@@ -100,7 +106,7 @@ body .page_content {
 }
 
 .wrapper {
-  max-width: 1520px;
+  max-width: 1280px;
   margin: auto;
 }
 .wrapper .change_theme {
@@ -109,34 +115,62 @@ body .page_content {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
           transform: translate(-50%, 0);
-  display: inline-block;
-  padding: 10px 17px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 0 0 10px 10px;
   background-color: #1565FF;
-  -webkit-transition-property: padding-top;
-  transition-property: padding-top;
+  -webkit-transition-property: height;
+  transition-property: height;
   -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+  height: 2.6rem;
+  width: 21rem;
+}
+.wrapper .change_theme:hover {
+  cursor: pointer;
 }
 .wrapper .change_theme * {
   color: #fff;
 }
-.wrapper .change_theme:hover {
-  padding-top: 85px;
+.wrapper .change_theme h4 {
+  margin-top: -0.7rem;
 }
-.wrapper .change_theme:hover .change_theme-black {
+.wrapper .change_theme-colors {
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.wrapper .change_theme.active {
+  height: 9rem;
+}
+.wrapper .change_theme.active .change_theme-black, .wrapper .change_theme.active .change_theme-white {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.wrapper .change_theme-black {
+.wrapper .change_theme-black, .wrapper .change_theme-white {
   display: none;
-  position: absolute;
-  top: 17px;
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0);
-  width: 100%;
+  width: 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -144,22 +178,41 @@ body .page_content {
       -ms-flex-align: center;
           align-items: center;
   cursor: pointer;
-  padding-bottom: 4%;
+  padding-bottom: 0.3rem;
+  border-bottom: 2px dashed #1565FF;
 }
-.wrapper .change_theme-black:hover {
+.wrapper .change_theme-black p, .wrapper .change_theme-white p {
+  text-align: center;
+}
+.wrapper .change_theme-black:hover, .wrapper .change_theme-white:hover {
   border-bottom: 2px dashed #fff;
 }
 .wrapper .change_theme-icon {
   display: inline-block;
-  width: 50px;
-  height: 50px;
-  background-color: #131820;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   margin-right: 5%;
+  margin-left: 4%;
+}
+.wrapper .change_theme-black {
+  top: 0;
+  left: 0;
+  border-right: 2px dashed #fff;
+}
+.wrapper .change_theme-black .change_theme-icon {
+  background-color: #131820;
+}
+.wrapper .change_theme-white {
+  top: 0;
+  right: 0rem;
+}
+.wrapper .change_theme-white .change_theme-icon {
+  background-color: #fff;
 }
 
 .top_bar {
-  margin: 2.7vw 2.7vw 1.7vw;
+  margin: 3rem 3rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -289,8 +342,8 @@ body .page_content {
   top: 50%;
   -webkit-transform: translate(50%, -50%);
           transform: translate(50%, -50%);
-  height: 44vw;
-  width: 31vw;
+  height: 36vw;
+  width: 27vw;
   background: #1565FF;
   border-radius: 17px;
   z-index: 999;
@@ -391,7 +444,7 @@ body .page_content {
   max-width: 100%;
 }
 .service_block-links {
-  height: 127vh;
+  height: 60rem;
   margin-top: 0.7vw;
 }
 .service_block-links-grid-container {
@@ -438,7 +491,7 @@ body .page_content {
   font-weight: bold;
   position: relative;
 }
-.service_block-links .service_links-link h3 {
+.service_block-links .service_links-link h4 {
   position: absolute;
   border: 4px dashed #175EE8;
   padding: 1rem;
@@ -456,13 +509,13 @@ body .page_content {
 .service_block-links .service_links-link span {
   opacity: 0;
 }
-.service_block-links .service_links-link.black h3 {
+.service_block-links .service_links-link.black h4 {
   background-color: #131820;
 }
 .service_block-links-development {
   grid-area: service_block-links-development;
 }
-.service_block-links-development a.service_links-link h3 {
+.service_block-links-development a.service_links-link h4 {
   top: 50%;
   left: 22%;
   padding: 1.7rem 1rem;
@@ -472,7 +525,7 @@ body .page_content {
 .service_block-links-hosting {
   grid-area: service_block-links-hosting;
 }
-.service_block-links-hosting a.service_links-link h3 {
+.service_block-links-hosting a.service_links-link h4 {
   position: absolute;
   bottom: 10%;
   border: 3px dashed #175EE8;
@@ -481,13 +534,13 @@ body .page_content {
   font-weight: bold;
   color: #175EE8;
 }
-.service_block-links-hosting a.black h3 {
+.service_block-links-hosting a.black h4 {
   background-color: #131820;
 }
 .service_block-links--consultation {
   grid-area: service_block-links--consultation;
 }
-.service_block-links--consultation h3 {
+.service_block-links--consultation h4 {
   color: #fff;
 }
 .service_block-links-security {
@@ -512,6 +565,10 @@ body .page_content {
 footer {
   margin-top: 2.7vw;
   background-color: #aecaff;
+}
+footer.black {
+  background-color: #0b2b6b;
+  color: #d4d4d4;
 }
 footer #footer {
   display: grid;
@@ -546,26 +603,7 @@ footer #footer .footer a:hover {
   border-left: 1px dashed #fff;
 }
 
-@media (max-width: 1280px) {
-  .top_bar-logo div {
-    width: 60%;
-    -webkit-filter: blur(2.7vw);
-            filter: blur(2.7vw);
-  }
-
-  .service_links {
-    max-width: 90vw;
-  }
-  .service_links h1 {
-    font-size: 3vw;
-    line-height: 6vw;
-    margin: 0;
-  }
-  .service_links-link {
-    height: 12vw;
-    line-height: 12vw;
-  }
-
+@media (max-width: 1330px) {
   footer {
     margin-top: 2vw;
     max-width: 90vw;
@@ -581,84 +619,6 @@ footer #footer .footer a:hover {
   }
 }
 @media (max-width: 992px) {
-  .top_bar-logo a {
-    font-size: 4vw;
-    line-height: 6vw;
-  }
-  .top_bar-logo div {
-    width: 70%;
-    height: 6vw;
-    -webkit-filter: blur(4vw);
-            filter: blur(4vw);
-  }
-  .top_bar-menu-main {
-    font-size: 2.1vw;
-    line-height: 3vw;
-  }
-  .top_bar-menu-profile-name {
-    font-size: 2.1vw;
-  }
-  .top_bar-menu-profile-img {
-    width: 6vw;
-    height: 6vw;
-  }
-  .top_bar-menu-profile-sign_up {
-    display: none;
-  }
-
-  .form-login {
-    height: 60vw;
-    width: 60vw;
-  }
-  .form-login-blur {
-    height: 100vw;
-    width: 90vw;
-  }
-  .form-login_container {
-    font-size: 2.7vw;
-  }
-  .form-login_container input {
-    padding: 1.7vw;
-    margin: 1.2vw 0 2.7vw;
-    color: #fff;
-  }
-  .form-login_container button {
-    padding: 1.7vw;
-    margin-top: 0.7vw;
-  }
-  .form-login_container a {
-    margin: 1.7vw auto 0;
-    font-size: 1.4vw;
-    line-height: 2.1vw;
-  }
-  .form-login_container a span {
-    border-bottom: 3px dotted #1565FF;
-    font-size: 2.1vw;
-  }
-  .form-login_container_cancel {
-    font-size: 1.7vw;
-    padding: 1.2vw;
-    border: 2px solid transparent;
-    -o-border-image: linear-gradient(to right, #00C2FF, #1565FF);
-       border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
-       border-image: linear-gradient(to right, #00C2FF, #1565FF);
-    border-image-slice: 1;
-  }
-
-  .service_links {
-    max-width: 100vw;
-  }
-  .service_links h1 {
-    font-size: 4vw;
-    line-height: 7vw;
-    margin: 0;
-  }
-  .service_links-link {
-    height: 15vw;
-    line-height: 15vw;
-    font-size: 2.1vw;
-  }
-
   footer {
     max-width: 100vw;
   }
@@ -673,16 +633,6 @@ footer #footer .footer a:hover {
   }
 }
 @media (max-width: 767px) {
-  .top_bar-logo a {
-    font-size: 6vw;
-    line-height: 7vw;
-  }
-  .top_bar-logo div {
-    width: 77%;
-    height: 7vw;
-    -webkit-filter: blur(4vw);
-            filter: blur(4vw);
-  }
   .top_bar-menu-main {
     display: none;
   }

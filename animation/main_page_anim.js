@@ -14,10 +14,20 @@ $('.form-login_container_cancel').on('click', function(e) {
   $('.form-login_wrapper').removeClass('form-login_wrapper_active');
 });
 
+
+$('.change_theme').on('click', function(e) {
+  e.preventDefault();
+  $(this).toggleClass('active');
+});
 $('.change_theme-black').on('click', function(e) {
   e.preventDefault();
   $(location).attr('href', "?theme=1")
 });
+$('.change_theme-white').on('click', function(e) {
+  e.preventDefault();
+  $(location).attr('href', "?theme=2")
+});
+
 
 function change_theme_on_black(){
 	$('body').toggleClass('black');

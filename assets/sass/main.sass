@@ -2,6 +2,7 @@
 @import "reset"
 
 html
+	font-size: 16px
 	h1
 		font-style: normal
 		font-weight: 500
@@ -27,6 +28,8 @@ html
 body
 	border: 8px solid $default_blue
 	overflow-x: hidden
+	&.black
+		border: 8px solid $default_blue
 	*
 		color: $tm
 		font-family: 'Rubik', sans-serif
@@ -48,7 +51,7 @@ body
 
 
 .wrapper
-	max-width: 1520px
+	max-width: 1280px
 	margin: auto
 	.change
 		&_theme
@@ -56,43 +59,67 @@ body
 			top: 0
 			left: 50%
 			transform: translate(-50%, 0)
-			display: inline-block
-			padding: 10px 17px
+			display: flex
+			flex-direction: column
+			justify-content: space-around
+			align-items: center
 			border-radius: 0 0 10px 10px
 			background-color: $default_blue
-			transition-property: padding-top
+			transition-property: height
 			transition-duration: 0.3s
+			height: 2.6rem
+			width: 21rem
+			&:hover
+				cursor: pointer
 			*
 				color: $white
-			&:hover
-				padding-top: 85px
-				.change_theme-black
-					display: flex
-			&-black				
-				display: none
-				position: absolute
-				top: 17px
-				left: 50%
-				transform: translate(-50%, 0)
+			h4
+				margin-top: -0.7rem
+			&-colors
 				width: 100%
+				position: relative
+				display: flex
+				flex-direction: row
+			&.active
+				height: 9rem
+				.change_theme-black, .change_theme-white
+					display: flex
+			&-black, &-white				
+				display: none
+				width: 50%
+				flex-direction: column
 				justify-content: center
 				align-items: center
 				cursor: pointer
-				padding-bottom: 4%
+				padding-bottom: 0.3rem
+				border-bottom: 2px dashed $default_blue
+				p
+					text-align: center
 				&:hover
 					border-bottom: 2px dashed $white
 			&-icon
 				display: inline-block
-				width: 50px
-				height: 50px
-				background-color: $black
+				width: 70px
+				height: 70px
 				border-radius: 50%
 				margin-right: 5%
+				margin-left: 4%
+			&-black
+				top: 0
+				left: 0
+				border-right: 2px dashed $white
+				.change_theme-icon
+					background-color: $black
+			&-white
+				top: 0
+				right: 0rem
+				.change_theme-icon
+					background-color: $white
 					
 
 			
 .top_bar
-	margin: 2.7vw 2.7vw 1.7vw
+	margin: 3rem 3rem 2rem
 	display: flex
 	flex-direction: row
 	justify-content: center
@@ -169,8 +196,8 @@ body
 		right: 50%
 		top: 50%
 		transform: translate(50%, -50%)
-		height: 44vw
-		width: 31vw
+		height: 36vw
+		width: 27vw
 		background: $default_blue
 		border-radius: 17px
 		z-index: 999
@@ -245,7 +272,7 @@ body
 .service_block
 	max-width: 100%
 	&-links
-		height: 127vh
+		height: 60rem
 		margin-top: 0.7vw
 		&-grid-container
 			height: 100% 			
@@ -277,7 +304,7 @@ body
 			font-size: 1.4vw
 			font-weight: bold
 			position: relative
-			h3
+			h4
 				position: absolute
 				border: 4px dashed $blue_uc
 				padding: 1rem
@@ -291,13 +318,13 @@ body
 			span
 				opacity: 0	
 		.service_links-link.black
-			h3
+			h4
 				background-color: $black
 
 		&-development
 			grid-area: service_block-links-development
 			a.service_links-link
-				h3
+				h4
 					top: 50%
 					left: 22%
 					padding: 1.7rem 1rem
@@ -305,7 +332,7 @@ body
 		&-hosting
 			grid-area: service_block-links-hosting
 			a.service_links-link
-				h3
+				h4
 					position: absolute
 					bottom: 10%
 					border: 3px dashed $blue_uc
@@ -314,11 +341,11 @@ body
 					font-weight: bold
 					color: $blue_uc
 			a.black
-				h3
+				h4
 					background-color: $black
 		&--consultation
 			grid-area: service_block-links--consultation
-			h3
+			h4
 				color: $white
 		&-security
 			grid-area: service_block-links-security
@@ -337,6 +364,9 @@ body
 footer
 	margin-top: 2.7vw
 	background-color: lighten($default_blue, 30%)
+	&.black
+		background-color: darken($blue_uc, 27%)
+		color: darken($white, 17%)
 	#footer
 		display: grid
 		max-width: 1520px
@@ -360,23 +390,11 @@ footer
 					border-bottom: 1px dashed $white
 					border-left: 1px dashed $white
 
-@media (max-width: 1280px)
+@media (max-width: 1330px)
 
-	.top_bar
-		&-logo
-			div
-				width: 60%
-				filter: blur(2.7vw)
 
-	.service_links
-		max-width: 90vw
-		h1
-			font-size: 3vw
-			line-height: 6vw
-			margin: 0
-		&-link
-			height: 12vw
-			line-height: 12vw			
+
+	
 	footer
 		margin-top: 2vw
 		max-width: 90vw
@@ -390,67 +408,9 @@ footer
 				padding-left: 0.6vw		
 
 @media (max-width: 992px)
-	.top_bar
-		&-logo
-			a
-				font-size: 4vw
-				line-height: 6vw
-			div
-				width: 70%
-				height: 6vw
-				filter: blur(4vw)
-		&-menu
-			&-main
-				font-size: 2.1vw
-				line-height: 3vw
-			&-profile
-				&-name
-					font-size: 2.1vw					
-				&-img
-					width: 6vw
-					height: 6vw
-				&-sign_up
-					display: none
-	.form
-		&-login
-			height: 60vw
-			width: 60vw		
-			&-blur
-				height: 100vw
-				width: 90vw
-			&_container
-				font-size: 2.7vw
-				input
-					padding: 1.7vw
-					margin: 1.2vw 0 2.7vw
-					color: $main-color				
-				button
-					padding: 1.7vw
-					margin-top: 0.7vw
-				a
-					margin: 1.7vw auto 0
-					font-size: 1.4vw
-					line-height: 2.1vw
-					span
-						border-bottom: 3px dotted $default_blue
-						font-size: 2.1vw
-				&_cancel
-					font-size: 1.7vw
-					padding: 1.2vw
-					border: 2px solid transparent
-					border-image: $blue_gradient
-					border-image-slice: 1
 
-	.service_links
-		max-width: 100vw
-		h1
-			font-size: 4vw
-			line-height: 7vw
-			margin: 0
-		&-link
-			height: 15vw
-			line-height: 15vw
-			font-size: 2.1vw			
+
+	
 	footer
 		max-width: 100vw
 		.footer
@@ -464,14 +424,6 @@ footer
 
 @media (max-width: 767px)
 	.top_bar
-		&-logo
-			a
-				font-size: 6vw
-				line-height: 7vw
-			div
-				width: 77%
-				height: 7vw
-				filter: blur(4vw)
 		&-menu
 			&-main
 				display: none
@@ -550,6 +502,7 @@ footer
 					border-left: 1px dashed $white
 
 @media (max-width: 576px)
+
 	.top_bar
 		&-logo
 			a

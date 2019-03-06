@@ -26,12 +26,18 @@ if(isset($_GET['theme']))
   <link href="<?php $_SERVER['DOCUMENT_ROOT']; ?>/assets/css/main.css" rel="stylesheet">
   <link href="<?php $_SERVER['DOCUMENT_ROOT']; ?>/assets/img/Hk9ETu_Rxp4.jpg" rel="shortcut icon" type="image/x-icon" />
 </head>
-<?php echo $_COOKIE['theme'] == 1 ? $dark_style = 'black' : $dark_style = ''?>
+<?php 
+  if($_COOKIE['theme'] == 1 || $_GET['theme'] == 1) $dark_style = 'black'; else $dark_style = '';
+  if($_COOKIE['theme'] == 1 && $_GET['theme'] == 2) $dark_style = '';
+?>
 <body class="<?php echo $dark_style ?>">
-  <div class="page_content <?php echo $_COOKIE['theme'] == 1 ? 'black' : ''?>" style="<?php echo $_COOKIE['theme'] == 1 ? 'background: url(assets/img/1112.png) repeat' : 'background: url(assets/img/2222.png) repeat'?>"></div>
+  <div class="page_content <?php echo $dark_style ?>" style="<?php echo $dark_style == 'black' ? 'background: url(assets/img/1112.png) repeat' : 'background: url(assets/img/2222.png) repeat'?>"></div>
   <div class="wrapper"> 
     <div class="change_theme">
-      <div class="change_theme-black"><div class="change_theme-icon"></div><p>Тёмная тема</p></div>
+      <div class="change_theme-colors">
+        <div class="change_theme-black"><div class="change_theme-icon"></div><p>Тёмная тема</p></div>
+        <div class="change_theme-white"><div class="change_theme-icon"></div><p>Светлая тема</p></div>
+      </div>
       <h4>Сменить тему</h4>
     </div>
     
@@ -41,6 +47,7 @@ if(isset($_GET['theme']))
           <img src="<?php $_SERVER['DOCUMENT_ROOT']; ?>/assets/img/logo2.png" alt="">
         </a>
       </div>
+      <div class="top_bar-menu-btn">Меню</div>
       <nav class="top_bar-menu-main">
         <a href="/" class="active"><h4>Главная</h4></a>
         <a href=""><h4>Услуги</h4></a>
@@ -56,7 +63,7 @@ if(isset($_GET['theme']))
                 <div><img src="" alt=""></div>';
             $unlogin = '
             <div class="top_bar-menu-profile-login">
-              <a href=""><h4>Личный кабинет</h4></a>
+              <a href=""><h4>Войти</h4></a>
             </div>';
             echo $login == 1 ? $login_tb : $unlogin;
           ?>

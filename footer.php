@@ -1,5 +1,5 @@
 			</div>
-		<footer>
+		<footer class="<?php echo $dark_style ?>">
 			<div id="footer">
 				<div class="footer contacts">
 					<h3>Информация</h3>
