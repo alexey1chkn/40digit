@@ -549,6 +549,11 @@ body .page_content {
 .service_block-links-design {
   grid-area: service_block-links-design;
 }
+.service_block-links-design a.service_links-link h4 {
+  position: absolute;
+  top: 17%;
+  left: 17%;
+}
 .service_block-links--service {
   grid-area: service_block-links--service;
 }
@@ -603,7 +608,7 @@ footer #footer .footer a:hover {
   border-left: 1px dashed #fff;
 }
 
-@media (max-width: 1330px) {
+@media (max-width: 1340px) {
   footer {
     margin-top: 2vw;
     max-width: 90vw;
@@ -673,45 +678,6 @@ footer #footer .footer a:hover {
     background-color: white;
   }
 
-  .form-login {
-    height: 70vw;
-    width: 70vw;
-  }
-  .form-login-blur {
-    height: 100vw;
-    width: 90vw;
-  }
-  .form-login_container {
-    font-size: 3.1vw;
-  }
-  .form-login_container_cancel {
-    font-size: 2.1vw;
-    padding: 1.2vw;
-    border: 2px solid transparent;
-    -o-border-image: linear-gradient(to right, #00C2FF, #1565FF);
-       border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
-       border-image: linear-gradient(to right, #00C2FF, #1565FF);
-    border-image-slice: 1;
-  }
-  .form-login-profile-name {
-    font-size: 2.7vw;
-  }
-  .form-login-profile-img {
-    width: 7vw;
-    height: 7vw;
-  }
-
-  .service_links h1 {
-    font-size: 7vw;
-    line-height: 11vw;
-    margin-bottom: 0;
-  }
-  .service_links-link {
-    height: 50vw;
-    font-size: 6vw;
-    line-height: 50vw;
-  }
-
   footer {
     margin-bottom: 3.7vw;
   }
@@ -732,82 +698,6 @@ footer #footer .footer a:hover {
   }
 }
 @media (max-width: 576px) {
-  .top_bar-logo a {
-    font-size: 7vw;
-    line-height: 9vw;
-  }
-  .top_bar-logo div {
-    height: 9vw;
-    -webkit-filter: blur(7vw);
-            filter: blur(7vw);
-  }
-  .top_bar-menu-btn {
-    font-size: 4.6vw;
-    line-height: 9vw;
-  }
-  .top_bar-menu-profile-login {
-    line-height: 4.6vw;
-  }
-  .top_bar-menu-profile-name {
-    font-size: 2.1vw;
-  }
-  .top_bar-menu-profile-img {
-    width: 6vw;
-    height: 6vw;
-  }
-
-  .form-login {
-    height: 80vh;
-    width: 90vw;
-  }
-  .form-login-blur {
-    height: 127vw;
-    width: 90vw;
-  }
-  .form-login_container {
-    font-size: 4.6vw;
-  }
-  .form-login_container input {
-    padding: 2.7vw;
-    margin: 2.1vw 0 4.6vw;
-    color: #fff;
-  }
-  .form-login_container button {
-    padding: 2.7vw;
-    margin-top: 1.7vw;
-  }
-  .form-login_container a {
-    margin: 3.7vw auto 0;
-    font-size: 2.7vw;
-    line-height: 2.7vw;
-  }
-  .form-login_container a span {
-    border-bottom: 3px dotted #1565FF;
-    font-size: 3.7vw;
-  }
-  .form-login_container_cancel {
-    top: 2vw;
-    right: 2vw;
-    font-size: 3.4vw;
-    padding: 2.1vw;
-    border: 2px solid transparent;
-    -o-border-image: linear-gradient(to right, #00C2FF, #1565FF);
-       border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
-       border-image: linear-gradient(to right, #00C2FF, #1565FF);
-    border-image-slice: 1;
-  }
-
-  .service_links-link {
-    height: 50vw;
-    font-size: 6vw;
-    line-height: 50vw;
-  }
-
-  body h1 {
-    font-size: 7vw;
-    margin: 1.7vw 0;
-  }
-
   footer {
     margin-bottom: 3.7vw;
   }

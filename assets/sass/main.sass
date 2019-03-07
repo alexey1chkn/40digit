@@ -351,6 +351,11 @@ body
 			grid-area: service_block-links-security
 		&-design
 			grid-area: service_block-links-design
+			a.service_links-link
+				h4
+					position: absolute
+					top: 17%
+					left: 17%
 		&--service
 			grid-area: service_block-links--service
 		&-job
@@ -390,7 +395,7 @@ footer
 					border-bottom: 1px dashed $white
 					border-left: 1px dashed $white
 
-@media (max-width: 1330px)
+@media (max-width: 1340px)
 
 
 
@@ -452,39 +457,7 @@ footer
 				&_active
 					border: 3px dotted $default-red
 					background-color: lighten($main-color, 17%)
-	.form
-		&-login
-			height: 70vw
-			width: 70vw		
-			&-blur
-				height: 100vw
-				width: 90vw
-			&_container
-				font-size: 3.1vw
-				&_cancel
-					font-size: 2.1vw
-					padding: 1.2vw
-					border: 2px solid transparent
-					border-image: $blue_gradient
-					border-image-slice: 1
-
-			&-profile
-				&-name
-					font-size: 2.7vw					
-				&-img
-					width: 7vw
-					height: 7vw
-
-	.service_links
-		h1
-			font-size: 7vw
-			line-height: 11vw
-			margin-bottom: 0
-		&-link
-			height: 50vw
-			font-size: 6vw
-			line-height: 50vw	
-
+	
 	footer
 		margin-bottom: 3.7vw
 		.footer
@@ -503,66 +476,6 @@ footer
 
 @media (max-width: 576px)
 
-	.top_bar
-		&-logo
-			a
-				font-size: 7vw
-				line-height: 9vw
-			div
-				height: 9vw
-				filter: blur(7vw)
-		&-menu
-			&-btn
-				font-size: 4.6vw
-				line-height: 9vw
-			&-profile
-				&-login
-					line-height: 4.6vw
-				&-name
-					font-size: 2.1vw					
-				&-img
-					width: 6vw
-					height: 6vw
-	.form
-		&-login
-			height: 80vh
-			width: 90vw		
-			&-blur
-				height: 127vw
-				width: 90vw
-			&_container
-				font-size: 4.6vw
-				input
-					padding: 2.7vw
-					margin: 2.1vw 0 4.6vw
-					color: $main-color				
-				button
-					padding: 2.7vw
-					margin-top: 1.7vw
-				a
-					margin: 3.7vw auto 0
-					font-size: 2.7vw
-					line-height: 2.7vw
-					span
-						border-bottom: 3px dotted $default_blue
-						font-size: 3.7vw
-				&_cancel
-					top: 2vw
-					right: 2vw
-					font-size: 3.4vw
-					padding: 2.1vw
-					border: 2px solid transparent
-					border-image: $blue_gradient
-					border-image-slice: 1
-	.service_links
-			&-link
-				height: 50vw
-				font-size: 6vw
-				line-height: 50vw
-	body
-		h1
-			font-size: 7vw
-			margin: 1.7vw 0
 	footer
 		margin-bottom: 3.7vw
 		.footer
