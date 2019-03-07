@@ -506,10 +506,6 @@ body .page_content {
   background-size: cover !important;
   background-position: center !important;
   border: 4px solid #175EE8;
-  -o-border-image: linear-gradient(to right, #00C2FF, #1565FF);
-     border-image: -webkit-gradient(linear, left top, right top, from(#00C2FF), to(#1565FF));
-     border-image: linear-gradient(to right, #00C2FF, #1565FF);
-  border-image-slice: 1;
   text-decoration: none;
   -webkit-transition: border 1s ease-out 15s;
   transition: border 1s ease-out 15s;
@@ -524,6 +520,8 @@ body .page_content {
   background-color: #175EE8;
   font-weight: bold;
   color: #fff;
+  -webkit-box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.5);
+          box-shadow: -4px 4px 8px rgba(0, 0, 0, 0.5);
 }
 .service_block-links .service_links-link:hover {
   border: 4px solid #175EE8;
