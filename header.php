@@ -80,7 +80,7 @@ if(isset($_GET['theme']))
               <div class="main-error alert alert-error hide"></div>
               <h3 class="form-signin-heading">Вход в кабинет</h2>
 
-              <input name="username" type="text" class="input-block-level" placeholder="Введите логин" autofocus required>
+              <input name="username" type="text" class="input-block-level" placeholder="Введите логин" required>
         
               <input name="password" type="password" class="input-block-level" placeholder="Введите пароль" required>
               <label class="checkbox">

@@ -2,7 +2,7 @@
 		<footer class="<?php echo $dark_style ?>">
 			<div id="footer">
 				<div class="footer contacts">
-					<h3>Информация</h3>
+					<h2>Информация</h2>
 					<a href="https://vk.com/40digit">Мы во вконтакте: <i class="fab fa-vk"></i></a>
 					<a href="">О компании</a>
 					<a href="">Контакты</a>
@@ -11,7 +11,7 @@
 					<a href="">Мерч</a>
 				</div>				
 				<div class="footer to_partners">
-				<h3>Партнёрам</h3>
+				<h2>Партнёрам</h2>
 					<a href="">Условия и цены</a>
 					<a href="">Для профессионалов</a>
 					<a href="">Реферальная программа</a>
@@ -19,7 +19,7 @@
 					<a href="">Кооперация</a>
 				</div>
 				<div class="footer services">
-					<h3>Услуги</h3>
+					<h2>Услуги</h2>
 					<a href="">Разработка сайтов</a>
 					<a href="">Разработка приложений</a>
 					<a href="">Обслуживание</a>
@@ -32,7 +32,7 @@
 					<a href="">Безопасность</a>
 				</div>
 				<div class="footer docs">
-					<h3>Помощь</h3>
+					<h2>Помощь</h2>
 					<a href="">FAQ</a>
 					<a href="">Документация</a>
 					<a href="">Договор оферты</a>

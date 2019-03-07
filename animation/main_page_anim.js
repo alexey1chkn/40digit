@@ -28,6 +28,10 @@ $('.change_theme-white').on('click', function(e) {
   $(location).attr('href', "?theme=2")
 });
 
+if (document.body.clientWidth <= 1040){
+  $('.service_block-links-grid-container').toggleClass('service_block-links-flex-container');
+  $('.service_block-links-flex-container').removeClass('service_block-links-grid-container');
+}
 
 function change_theme_on_black(){
 	$('body').toggleClass('black');
