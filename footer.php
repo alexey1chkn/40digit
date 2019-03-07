@@ -59,9 +59,6 @@
 		$path = $_SERVER['PHP_SELF'];
 		$file = basename($path, ".php");
 	?>
-		<script>
-			var $theme_number = "<?php $_COOKIE['theme']; ?>";
-		</script>
 	<?php if ( $file == "index" ):?>
 		<script src="<?php $_SERVER['DOCUMENT_ROOT']; ?>/animation/main_page_anim.js"></script>
 	<?php endif;?>

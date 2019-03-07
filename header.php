@@ -1,4 +1,5 @@
 <?php
+
 if (!empty($_COOKIE['sid'])) {
     // check session id in cookies
     session_id($_COOKIE['sid']);
@@ -17,7 +18,7 @@ if(isset($_GET['theme']))
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="theme-color" content="#171C27">
+  <meta name="theme-color" content="#1565FF">
   <title>40digit - Ваш выбор</title>
   <!-- Font Awesome -->
   <link href="https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic" rel="stylesheet">
@@ -74,7 +75,7 @@ if(isset($_GET['theme']))
         <div class="form-login-blur">
         </div>
         <div class="form-login">
-          <form method="post" class="form-signin ajax" action="<?php $_SERVER['DOCUMENT_ROOT']; ?>/modules/ajax.php">
+          <form method="post" class="form-signin ajax" action="<?php $_SERVER['DOCUMENT_ROOT']; ?>/modules/login/ajax.php">
             <button type="button" class="form-login_container_cancel"><p>Закрыть</p></button>
             <div class="form-login_container">
               <div class="main-error alert alert-error hide"></div>

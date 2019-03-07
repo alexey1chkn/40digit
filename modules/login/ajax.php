@@ -51,7 +51,7 @@ class AuthorizationAjaxRequest extends AjaxRequest
         }
 
         $this->status = "ok";
-        $this->setResponse("redirect", ".");
+        $this->setResponse("redirect", "");
         $this->message = sprintf("Рады видеть Вас, %s! Добро пожаловать.", $username);
     }
 
