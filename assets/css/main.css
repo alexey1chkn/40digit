@@ -102,6 +102,10 @@ body .page_content {
 .black {
   background-color: #131820;
 }
+.black a.service_links-link h4 {
+  -webkit-box-shadow: -4px 4px 8px rgba(255, 255, 255, 0.5);
+          box-shadow: -4px 4px 8px rgba(255, 255, 255, 0.5);
+}
 .black * {
   color: #fff;
 }
@@ -735,7 +739,7 @@ footer #footer .footer a:hover {
   }
   .service_block-links-development a.service_links-link h4 {
     top: 50%;
-    left: 22%;
+    left: 21%;
     padding: 5.4vw;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%);
